@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Dammed Elf</name>
+		<update version="0.2"></update>
+	</info>
+
+	<element name="Dammed Elf" type="Race" source="Homebrew" id="ID_RACE_DAMMED_ELF">
+		<description>
+			<p class="flavor">Centuries ago, a group of High Elves were exiled by the leader of their settlement, for accusations of witchcraft, while some of their tribe were executed, many escaped into the snowy mountains to the North. With the harsh conditions of the location, they were able to escape any persecution, but they also found themselves on the brink of extinction. After more deaths due to the conditions alone, the few who remained had one option left to them to ensure the survival of their tribe, turning to the one of the dammed gods of the land, Vali: the god of revenge. Vali, seeing their determination and hatred for their own kind, decided to help them out, for a price. Vali placed a curse upon the elves; the curse imbued the tribe with dark powers, but it also had a condition, they must destroy their former settlement. The elves set forth with a vengeance with their new powers burned their old home to the ground.</p>
+			<h4>SLENDER AND HORNED</h4>
+			<p>With their unearthly grace and fine features, dammed elves appear hauntingly to humans and members of many other races. They are slightly shorter than humans on average, ranging from well under 5 feet tall to just over 6 feet. They are more slender than humans, weighing only 100 to 145 pounds. Males and females are about the same height and have horns that can grow up to a foot, and males are only marginally heavier than females.</p>
+			<p class="indent">Dammed elves’ coloration encompasses grey to dark blue.</p>
+			<h4>A TIMELESS PERSPECTIVE</h4>
+			<p>Dammed elves can live well over 700 years, giving them a broad perspective on events that might trouble the shorterlived races more deeply. They are more often amused than excited, and more likely to be curious than greedy. They tend to remain aloof and unfazed by petty happenstance. When pursuing a goal, however, whether adventuring on a mission or learning a new skill or art, elves can be focused and relentless. They are slow to make friends and enemies, and even slower to forget them. They reply to petty insults with disdain and to serious insults with vengeance.</p>
+			<h4>DAMMED ELF TRAITS</h4>
+			<p>Your elf character has a variety of natural abilities, the result of thousands of years of elven refinement.</p>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Charisma score increases by 2.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Although elves reach physical maturity at about the same age as humans, the elven understanding of adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims adulthood and an adult name around the age of 100 and can live to be 750 years old.</p>
+			<p class="indent"><strong><em>Alignment.</em></strong> The chaotic nature of elves has only been amplified by the curse, and many Dammed Elves have chaotic alignments. Evil or Neutral alignments are common.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet.</p>
+			<p class="indent"><strong><em>Darkvision.</em></strong> Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.</p>
+			<p class="indent"><strong><em>Keen Senses.</em></strong> You have proficiency in the Perception skill.</p>
+			<p class="indent"><strong><em>Fey Ancestry.</em></strong> You have advantage on saving throws against being charmed, and magic can’t put you to sleep.</p>
+			<p class="indent"><strong><em>Demonic Magic.</em></strong> You know the friends cantrip. When you reach 3rd level, you can cast the faerie fire spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the misty step spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.</p>
+			<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write Common, Elvish, and Abyssal.</p>
+		</description>
+		<sheet display="false" />
+		<setters>
+			<set name="names" type="male">Adran, Aelar, Aramil, Arannis, Aust, Beiro, Berrian, Carric, Enialis, Erdan, Erevan, Galinndan, Hadarai, Heian, Himo, Immeral, Ivellios, Laucian, Mindartis, Paelias, Peren, Quarion, Riardon, Rolen, Soveliss, Thamior, Tharivol, Theren, Varis</set>
+			<set name="names" type="female">Adrie, Althaea, Anastrianna, Andraste, Antinua, Bethrynna, Birel, Caelynn, Drusilia, Enna, Felosial, Ielenia, Jelenneth, Keyleth, Leshanna, Lia, Meriele, Mialee, Naivara, Quelenna, Quillathe, Sariel, Shanairra, Shava, Silaqui, Theirastra, Thia, Vadania, Valanthe, Xanaphia</set>
+			<set name="names" type="child">Ara, Bryn, Del, Eryn, Faen, Innil. Lael, Mella, Naill, Naeris, Phann, Rael, Rinn, Sai, Syllin, Thia, Vall</set>
+			<set name="names" type="family">Amakiir, Amastacia, Galanodel, Holimion, Ilphelkiir, Liadon, Meliamne, Nai'lo, Siannodel, Xiloscient</set>
+			<set name="names-format">{{name}} {{family}}</set>
+			<set name="height" modifier="2d10">4'6"</set>
+			<set name="weight" modifier="1d4">90 lb.</set>
+		</setters>
+		<rules>
+			<stat name="charisma" value="2" requirements="!ID_UA_PSK_GRANTS_ELF_SUBRACE" />
+			<stat name="innate speed" value="30" bonus="base" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_UA20171113_SUB_RACE_GRUGACH" />
+			<grant type="Language" id="ID_LANGUAGE_ELVISH" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_KEEN_SENSES" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_FEY_ANCESTRY" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_TRANCE" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_ELVEN_SUBRACE" />
+		</rules>
+	</element>
+	<element name="Keen Senses" type="Racial Trait" source="Player’s Handbook" id="ID_RACIAL_TRAIT_KEEN_SENSES">
+		<description>
+			<p>You have proficiency in the Perception skill.</p>
+		</description>
+		<sheet display="false">
+			<description>You have proficiency in the Perception skill.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" />
+		</rules>
+	</element>
+	<element name="Fey Ancestry" type="Racial Trait" source="Player’s Handbook" id="ID_RACIAL_TRAIT_FEY_ANCESTRY">
+		<description>
+			<p>You have advantage on saving throws against being charmed, and magic can’t put you to sleep.</p>
+		</description>
+		<sheet>
+			<description>Advantage on saving throws against being charmed, and magic can’t put you to sleep.</description>
+		</sheet>
+	</element>
+</elements>
